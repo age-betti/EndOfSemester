@@ -1,8 +1,12 @@
 ﻿CREATE TABLE [dbo].[TourEvent]
 (
-	[EventID] INT NOT NULL PRIMARY KEY, 
-    [EventMonth] NVARCHAR(50) NULL, 
-    [EventDay] NVARCHAR(50) NULL, 
-    [EventYear] NVARCHAR(50) NULL, 
-    [Fee] MONEY NULL
+	[EventID] INT NOT NULL PRIMARY KEY,
+	[TourName] NVARCHAR(50) NOT NULL,
+    [EventMonth] NVARCHAR(50) NOT NULL, 
+    [EventDay] NVARCHAR(50) NOT NULL, 
+    [EventYear] NVARCHAR(50) NOT NULL, 
+    [Fee] MONEY NOT NULL,
+
+	CONSTRAINT FK_TourNametoTourEvent FOREIGN KEY (TourName)
+    REFERENCES Tour(TourName),
 )

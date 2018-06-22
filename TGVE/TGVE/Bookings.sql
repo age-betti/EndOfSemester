@@ -11,7 +11,7 @@
 
 	CONSTRAINT FK_ClientID FOREIGN KEY (ClientID)
     REFERENCES Client(ClientID),
-	CONSTRAINT FK_TourName FOREIGN KEY (TourName)
+	CONSTRAINT FK_TourNametoBooking FOREIGN KEY (TourName)
     REFERENCES Tour(TourName),
 	CONSTRAINT FK_EventMonth FOREIGN KEY (EventMonth)
     REFERENCES TourEvent(EventMonth),
